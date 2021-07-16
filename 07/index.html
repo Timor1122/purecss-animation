@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+  <style>
+    *{
+      margin: 0;
+      padding: 0;
+    }
+
+    .menu{
+      height: 40px;
+      width: 100%;
+      background-color:rgba(0,0,0,.7) ;
+      border-bottom-left-radius: 50%;
+      border-bottom-right-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: fixed;
+      top: 0;
+      left: 0;
+      transition: .3s;
+    }
+    .menu ul{
+      list-style: none;
+    }
+    .menu ul li{
+      color: white;
+      font-size: 30px;
+      font-family: "arial";
+      cursor: pointer;
+      display: none;
+
+    }
+    ul li:hover{
+      color: lightskyblue;
+    }
+    input[type="checkbox"]{
+      display: none;
+    }
+    label{
+      position: fixed;
+      top: 0;
+      left: 45%;
+      z-index: 3;
+      transition: .3s;
+    }
+    label > div{
+      height: 7px;
+      width: 45px;
+      background-color: #fff;
+      border-radius: 10px;
+      margin-top: 5px;
+      transition: .3s;
+    }
+    #menu-button:checked ~.menu{
+      border-bottom-left-radius: 0%;
+      border-bottom-right-radius: 0%;
+      height: 100vh;
+    }
+    #menu-button:checked ~ .menu ul li{
+      display: block;
+    }
+    #menu-button:checked ~ label> .top{
+      transform: rotateZ(-45deg);
+      margin-top: 18px;
+    }
+    #menu-button:checked ~ label> .middle{
+      opacity: 0;
+    }
+
+    #menu-button:checked ~ label > .bottom {
+      transform: rotateZ(45deg);
+      margin-top: -20px;
+    }
+
+    #menu-button:checked ~ label  {
+      left: 90%;
+      top: 5px;
+    }
+    .content{
+      margin: 20px;
+      padding: 10px;
+      line-height: 30px;
+    }
+  </style>
+</head>
+<body>
+<input type="checkbox" id="menu-button">
+<label for="menu-button">
+  <div class="top"></div>
+  <div class="middle"></div>
+  <div class="bottom"></div>
+</label>
+<div class="menu">
+  <ul>
+    <li>home</li>
+    <li>About</li>
+    <li>blogs</li>
+    <li>gallery</li>
+    <li>portfolio</li>
+  </ul>
+</div>
+<div class="content">
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid aperiam, architecto at deserunt exercitationem iure, minima nesciunt odio pariatur placeat praesentium quidem quos sapiente sed tempore tenetur totam, veritatis voluptatem!</p>
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid aperiam, architecto at deserunt exercitationem iure, minima nesciunt odio pariatur placeat praesentium quidem quos sapiente sed tempore tenetur totam, veritatis voluptatem!</p>
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid aperiam, architecto at deserunt exercitationem iure, minima nesciunt odio pariatur placeat praesentium quidem quos sapiente sed tempore tenetur totam, veritatis voluptatem!</p>
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid aperiam, architecto at deserunt exercitationem iure, minima nesciunt odio pariatur placeat praesentium quidem quos sapiente sed tempore tenetur totam, veritatis voluptatem!</p>
+</div>
+</body>
+</html>
