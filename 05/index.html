@@ -3,8 +3,90 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+  <style>
+    *{
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    input[type='checkbox']{
+      display: none;
+    }
+    label div{
+      height:   50px;
+      width: 70px;
+      background-color: black;
+      color: white;
+      border-radius: 50%;
+      line-height: 40px;
+      text-indent: 7px;
+      cursor: pointer;
+      z-index: 1;
+      border: 3px solid white;
+      position: fixed;
+      top: -5px;
+      right: -20px;
+    }
+    label div:hover{
+      background: lightskyblue;
+    }
+    .content{
+      padding: 40px;
+      text-align: justify;
+      line-height: 30px;
+    }
+    ul{
+      display: flex;
+      list-style: none;
+      background: black;
+      position: fixed;
+      top: 0;
+      width: 100%;
+      transform: scaleX(1);
+      transform-origin: right;
+      transition: .3s;
+    }
+    ul li{
+      padding: 10px;
+    }
+    ul li a{
+      color: white;
+      text-decoration: none;
+      padding: 5px;
+
+    }
+    ul li a:hover{
+      color: lightskyblue;
+      border-bottom: 2px solid white;
+    }
+    #toggle:checked ~ ul {
+      transform: scaleX(0);
+      border-radius: 360px;
+    }
+  </style>
 </head>
 <body>
+<input type="checkbox" id="toggle">
+<label for="toggle">
+  <div class="menu">
+   menu
+  </div>
+</label>
+<ul>
+  <li><a href="">home</a></li>
+  <li><a href="">about</a></li>
+  <li><a href="">blogs</a></li>
+  <li><a href="">gallery</a></li>
+  <li><a href="">portfolio</a></li>
+</ul>
+<div class="content">
+  <h3>dummy text</h3>
+  <p>Lorem ipsum dolor sit amet, conssectetur adipisicing elit. Beatae fugit minima sapiente tempore. Autem consectetur culpa dolor eos explicabo impedit, iste necessitatibus nostrum quam quo unde ut, vitae? Consequatur, quod.</p>
+  <p>Lorem ipsum dolor sit amet, conssectetur adipisicing elit. Beatae fugit minima sapiente tempore. Autem consectetur culpa dolor eos explicabo impedit, iste necessitatibus nostrum quam quo unde ut, vitae? Consequatur, quod.</p>
+  <p>Lorem ipsum dolor sit amet, conssectetur adipisicing elit. Beatae fugit minima sapiente tempore. Autem consectetur culpa dolor eos explicabo impedit, iste necessitatibus nostrum quam quo unde ut, vitae? Consequatur, quod.</p>
+  <p>Lorem ipsum dolor sit amet, conssectetur adipisicing elit. Beatae fugit minima sapiente tempore. Autem consectetur culpa dolor eos explicabo impedit, iste necessitatibus nostrum quam quo unde ut, vitae? Consequatur, quod.</p>
+  <p>Lorem ipsum dolor sit amet, conssectetur adipisicing elit. Beatae fugit minima sapiente tempore. Autem consectetur culpa dolor eos explicabo impedit, iste necessitatibus nostrum quam quo unde ut, vitae? Consequatur, quod.</p>
 
+</div>
 </body>
 </html>
