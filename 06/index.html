@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        ul {
+            background: tomato;
+            height: 100%;
+            width: 250px;
+            position: fixed;
+            top: 0;
+            left: 0;
+            border-right: 2px solid;;
+            transform: scaleX(0);
+            transform-origin: left;
+            transition: transform .3s;
+        }
+
+        ul li {
+            list-style: none;
+            color: white;
+            padding: 20px 0px 10px 20px;
+            cursor: pointer;
+            text-transform: uppercase;
+        }
+
+        ul li:hover {
+            background: white;
+            color: tomato;
+        }
+
+        .content {
+            padding: 20px;
+            line-height: 30px;
+        }
+
+        input[type="checkbox"] {
+            display: none;
+        }
+
+        label .one {
+            height: 8px;
+            width: 40px;
+            position: fixed;
+            top: 10px;
+            right: 10px;
+            border: 2px solid tomato;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: .3s;
+        }
+
+        label .two {
+            height: 8px;
+            width: 40px;
+            position: fixed;
+            top: 20px;
+            right: 10px;
+            border: 2px solid tomato;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: .3s;
+        }
+
+        label .three {
+            height: 8px;
+            width: 40px;
+            position: fixed;
+            top: 30px;
+            right: 10px;
+            border: 2px solid tomato;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: .3s;
+        }
+
+        #menu-button:checked ~ ul {
+            transform: scaleX(1);
+        }
+
+        #menu-button:checked ~ label > .one {
+            transform: rotateZ(45deg) scaleX(.5) translateX(15px);
+        }
+
+        #menu-button:checked ~ label > .two {
+          transform: translate(-7px,0px);
+          background-color: #fff;
+          z-index: 1;
+        }
+        #menu-button:checked ~ label > .three {
+          transform: rotateZ(-45deg) scaleX(.5) translateX(15px);
+        }
+    </style>
+</head>
+<body style="">
+<input id="menu-button" type="checkbox">
+<label for="menu-button">
+    <div class="one"></div>
+    <div class="two"></div>
+    <div class="three"></div>
+</label>
+<ul>
+    <li>home</li>
+    <li>about</li>
+    <li>blogs</li>
+    <li>gallery</li>
+    <li>porfolio</li>
+</ul>
+<div class="content">
+    <h3>
+        dummy text
+    </h3>
+    <p>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium aliquam amet consequatur, cum dignissimos
+        esse eum harum non numquam odio pariatur provident quibusdam quo reiciendis, sapiente veniam veritatis vitae.
+        Architecto.
+    </p>
+    <p>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium aliquam amet consequatur, cum dignissimos
+        esse eum harum non numquam odio pariatur provident quibusdam quo reiciendis, sapiente veniam veritatis vitae.
+        Architecto.
+    </p>
+    <p>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium aliquam amet consequatur, cum dignissimos
+        esse eum harum non numquam odio pariatur provident quibusdam quo reiciendis, sapiente veniam veritatis vitae.
+        Architecto.
+    </p>
+    <p>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium aliquam amet consequatur, cum dignissimos
+        esse
+        eum harum non numquam odio pariatur provident quibusdam quo reiciendis, sapiente veniam veritatis vitae.
+        Architecto.
+    </p>
+</div>
+</body>
+</html>
